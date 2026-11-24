@@ -1,5 +1,9 @@
 # jwt-app – Front-end da Biblioteca
 
+## Vídeo de demonstração
+
+**[▶ Assistir ao vídeo no YouTube](https://youtu.be/NTQZEUHGwF4)**
+
 Aplicação Next.js responsável pelo login e pela interface de gestão da biblioteca.
 
 ## Pré-requisitos
