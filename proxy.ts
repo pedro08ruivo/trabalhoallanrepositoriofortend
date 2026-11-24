@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export function proxy(req: NextRequest) {
-  const token = req.cookies.get('token')?.value;
+  const accessToken = req.cookies.get('accessToken')?.value;
+  const refreshToken = req.cookies.get('refreshToken')?.value;
 
-  if (!token) {
+  // An expired access token is still refreshable while the refresh cookie exists.
+  if (!accessToken && !refreshToken) {
     return NextResponse.redirect(
       new URL('/', req.url)
     );
